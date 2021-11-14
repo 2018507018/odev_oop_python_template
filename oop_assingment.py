@@ -15,15 +15,33 @@ urun fiyati hesaplarken once kar sonra otv ve kdv sirayla alis fiyatina eklenmel
 
 hazırlayan @aucan
 
-Öğrenci Ad Soyad=
-Öğrenci No=
-Bölüm=
-Sınıf=
+Öğrenci Ad Soyad=isa nerse
+Öğrenci No=2018507018
+Bölüm=YBS
+Sınıf=4
 '''
 
 class urunler:
-    #kodunuzu bu yorum satırını silerek buraya yazınız, diğer kısımları değiştirmeyiniz.
-   
+    urun_adi= ""
+    urun_alis_fiyati = 200
+    urun_otv_orani= 0.25
+    urun_kdv_orani=0.35
+    kar_orani=0.1
+    
+    def __init__(self,aurun_adi, aurun_alis_fiyati, aurun_otv_orani, aurun_kdv_orani)
+      self.urun_adi=aurun_adi
+      self.urun_alis_fiyati=aurun_alis_fiyati
+      self.urun_otv_orani=aurun_otv_orani
+      self.urun_kdv_orani= aurun_kdv_orani
+    
+    def urun_satis_fiyati(self,kar_orani):
+        
+        urun_satis_fiyati = urun_alis_orani + (urun_alis_fiyati*kar_orani) 200+ (200*0.1) = 220
+        urun_satis_fiyati = urun_satis_fiyati + (urun_satis_fiyati * urun_otv_orani) 220 + (220*0.25) = 275
+        urun_satis_fiyati = urun_satis_fiyati + (urun_satis_fiyati * urun_kdv_orani)  275 + (275*0.35) = 371,25
+        
+        
+        
         
     
 def sepet_fiyati(kar_orani):
@@ -41,7 +59,7 @@ def sepet_fiyati(kar_orani):
     yumurta=urunler('yumurta',5,0.30,0.19)
     toplam=0   
     #-------**-----------
-    #kodunuzu bu yorum satırını silerek buraya yazınız, diğer kısımları değiştirmeyiniz.
+    toplam=ekmek.urun_satis_fiyati(kar_orani)+patates.urun_satis_fiyati(kar_orani)+elma.urun_satis_fiyati(kar_orani)+un.urun_satis_fiyati(kar_orani)+yumurta.urun_satis_fiyati(kar_orani)
     #-------**-----------
     return toplam
 
