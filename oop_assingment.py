@@ -22,22 +22,22 @@ Sınıf=4
 '''
 
 class urunler:
-    urun_adi= ""
-    urun_alis_fiyati= 0
-    urun_otv_orani= 0
-    urun_kdv_orani=0
+     urun_adi= ""
+     urun_alis_fiyati=0
+     urun_otv_orani=0
+     urun_kdv_orani=0
     
-    def __init__(self,aurun_adi, aurun_alis_fiyati, aurun_otv_orani, aurun_kdv_orani)
-      self.urun_adi=aurun_adi
-      self.urun_alis_fiyati=aurun_alis_fiyati
-      self.urun_otv_orani=aurun_otv_orani
-      self.urun_kdv_orani= aurun_kdv_orani
-    
-    def urun_satis_fiyati(self,kar_orani):
+     def __init__(self,aurun_adi, aurun_alis_fiyati, aurun_otv_orani, aurun_kdv_orani):
+          self.urun_adi=aurun_adi
+          self.urun_alis_fiyati=aurun_alis_fiyati
+          self.urun_otv_orani=aurun_otv_orani
+          self.urun_kdv_orani=aurun_kdv_orani
         
-             urun_satis_fiyati = urun_alis_orani + (urun_alis_fiyati*kar_orani) 200+ (200*0.1) = 220
-             urun_satis_fiyati = urun_satis_fiyati + (urun_satis_fiyati * urun_otv_orani) 220 + (220*0.25) = 275
-             urun_satis_fiyati = urun_satis_fiyati + (urun_satis_fiyati * urun_kdv_orani)  275 + (275*0.35) = 371,25
+     def urun_satis_fiyati(self,kar_orani):
+          self.urun_alis_fiyati= self.urun_alis_fiyati + (self.urun_alis_fiyati*kar_orani)
+          self.urun_alis_fiyati= self.urun_alis_fiyati + (self.urun_alis_fiyati*self.urun_otv_orani) 
+          self.urun_alis_fiyati= self.urun_alis_fiyati + (self.urun_alis_fiyati*self.urun_kdv_orani)
+          return self.urun_alis_fiyati
         
         
         
